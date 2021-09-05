@@ -1,0 +1,119 @@
+.gallery-2{
+    /*margin-top: 147px;*/
+    width:100%; 
+    height:300px; 
+}
+
+#gallery-2-container{
+    width:100%; 
+    height:100%; 
+    position:relative; 
+    display: grid;
+    grid-template-columns:repeat(2,1fr);
+}
+
+#mobile-view-bg{
+    display: none; 
+}
+
+.gallery-2-col{
+    width:100%; 
+    height:100%; 
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+
+}
+
+.gallery-col-inner-div{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#galler-col-inner-img1{
+    width:100%;
+    height:300px; 
+    background:url('../images/jonathan-kemper-t6Wmvbw_MdI-unsplash.jpg');
+    background-position:center;
+    background-size:cover; 
+    
+
+}
+#galler-col-inner-img2{
+    width:100%; 
+    height:300px; 
+    background:url('../images/claudio-schwarz-purzlbaum-0-DjV_Tk1cQ-unsplash.jpg');
+    background-position:center;
+    background-size:cover;
+     
+
+}
+#galler-col-inner-img3{
+    width:100%;
+    height:300px; 
+    background:url('../images/jakob-owens-50LI_TgaB3k-unsplash.jpg');
+    background-position:center;
+    background-size:cover; 
+     
+
+
+}#galler-col-inner-img4{
+    width:100%;
+    height:300px; 
+    background:url('../images/jakob-owens-R-8Kkjaztn0-unsplash.jpg');
+    background-position:center;
+    background-size:cover; 
+     
+
+}
+
+.galler-col-inner-text{
+    position: absolute;
+    width:100%; 
+    height:100%; 
+    background-color: rgba(0, 0, 0, 0.5);
+    color:white; 
+    text-align: center;
+    line-height: 250px;
+}
+
+@media(max-width:420px){
+    .gallery-2{
+        margin-top:0px; 
+    }
+
+    .galler-col-inner-text{
+        display:none;
+    }
+
+    #mobile-view-bg{
+        width:100%; 
+        height:100%; 
+        position: absolute;
+        top:0px; 
+        left:0px; 
+        display:flex; 
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index:2;
+    }
+    #mobile-view-bg p{
+        color:white; 
+    }
+    #mobile-view-bg button{
+        width:170px;
+        position: absolute;
+        left:22%; 
+        bottom:30%; 
+        padding:10px 20px; 
+        background-color:#007bff;  
+        border:none; 
+        color:white; 
+    }
+}

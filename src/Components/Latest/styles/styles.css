@@ -1,0 +1,223 @@
+.Latest-titles-container{
+    width:100%; 
+    height:250px; 
+    display:grid; 
+    align-content: center;
+}
+
+.Latest-section-title{
+    color: grey;
+    text-align: center;
+    font-family: Rubik;
+}
+
+.Latest-section-subtitle{
+    color: grey;
+    text-align: center;
+    font-family: Rubik;
+}
+
+#Lateswrapper{
+    height:1050px;
+    padding-top:50px; 
+    background-color:black; 
+}
+#Latescontainer{
+    width:80%; /* make this equals to the height or the opposite */ 
+    height:150vh; /* if i make this equals to width, the images will be taller */ 
+    margin:auto; 
+    display:grid; 
+    grid-template-columns:repeat(3,1fr);
+}
+
+.Latesbox{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.Latesbox-title{
+    margin: 20px;
+    color:#0876AA; 
+}
+
+.Phone-name{
+    color:#0876AA;
+}
+
+.Latesbox-paragraph{
+   width:80%; 
+   margin-top:10px;
+   align-self: center;
+   color:white; 
+}
+
+.Latesbox-image{
+    width:100%; 
+    height:250px; 
+    background-size:cover;
+    background-position:center; 
+
+}
+
+.Latestbox-img-signs-container{
+    display:none; 
+}
+
+.Latesbox-image-text{
+    display:none; 
+}
+
+.right-arrow{
+    display:none; 
+}
+
+@media(max-width:768px){
+    #Lateswrapper{
+        height: 230vh;
+    }
+
+    .Latestbox-img-signs-container{
+        display: none; 
+    }
+    .right-arrow{
+        display: none;
+    }
+}
+
+@media(max-width:660px){
+    #Lateswrapper{
+        display:block; 
+        height:251vh;
+        overflow-y: hidden;
+    }
+    #Latescontainer{        
+        width:100%; 
+        height:50%; 
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .Latestbox-img-signs-container{
+    display:none; 
+    }
+
+    .Latesbox-img{
+        height: 107%;
+    }
+    
+    .right-arrow{
+        display: none;
+    }
+
+}
+
+
+@media(max-width:540px){
+    #Lateswrapper{
+        display:block; 
+        height:280vh;
+        overflow-y: hidden;
+    }
+
+    #Latescontainer{        
+        width:100%; 
+        height:50%; 
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .Latestbox-img-signs-container{
+    display:none; 
+    }
+
+    .Latesbox-img{
+        height: 107%;
+    }
+    
+}
+
+@media(max-width:420px){
+    #Latestwrapper{
+        height:500px; 
+        }
+    #Latescontainer{
+        display: flex;
+        flex-direction: column;
+        align-items:center; 
+
+    }   
+    /* making the paragaph card invisible */
+    .Latesbox-paragraph,.Latesbox-title, .Phone-name{
+        display:none; 
+    }
+
+    /*image containing div */
+    .Latesbox-img{
+        width:100%; 
+        height:100%;
+        position: relative; 
+        display: flex;
+        flex-direction: column;
+        text-align: center; 
+        justify-content: center;
+        margin-top:25px; 
+        
+    }
+
+    .Latestbox-img-signs-container{
+        width:100%; 
+        position: absolute;
+        top:5px; 
+        display: flex;
+        justify-content: space-between;
+        padding:0 10px; 
+    }
+
+    .Latestbox-img-cart-sign{
+        color:white; 
+
+    }
+
+    .Latesbox-image-text{
+        display: block;
+    }
+
+    .Latesbox-image-text h6{
+        width:100%; 
+        position: absolute;
+        left:0px;
+        transform:translateY(-100%);
+        padding-top:5px; 
+        color:white;  
+        font-size:12px; 
+        text-align:left;   
+        background-color:rgba(0,0,0,0.5);       
+    }
+ 
+    .Latesbox-image-text p{
+        margin-top:10px; 
+        color:grey;  
+        font-size:12px; 
+        text-align:left;         
+    }
+
+    .right-arrow{
+        display:none; 
+        width:30px; 
+        height:30px;
+        position: absolute;
+        bottom:35%;
+        right:0px; 
+        color: white;
+    }
+
+    .Latestbox-img-slider-dot-signs span{
+        display:inline-block;  
+        width:7px; 
+        height:7px; 
+        border-radius:50%; 
+        background-color: white;
+        margin-left:4px;
+    }
+}

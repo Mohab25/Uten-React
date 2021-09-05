@@ -1,0 +1,91 @@
+#Gallery{
+}
+
+.Gallery-container{
+    height:700px;
+    margin-top:100px; 
+}
+.Gallery-title-container{
+    width: 100%;
+    height: 200px;
+    display: grid;
+    align-content: center;
+}
+
+
+.Gallery-title{
+    color: grey;
+    text-align: center;
+    font-family: Rubik;
+}
+
+.Gallery-subtitle{
+    color: grey;
+    text-align: center;
+    font-family: Rubik;
+}
+
+#Gallery-grid{
+    width:100%; 
+    height:500px;  /* more sensible way for this is to be 100%*/
+    display:grid; 
+    grid-template-columns:repeat(2,1fr);
+}
+
+#Gallery-grid-container-1{
+    display:grid; 
+    grid-template-columns:1fr; 
+}
+
+#Gallery-grid-containr-1-text{
+   text-align: center;  /* This should be on top of the image with a z-index */
+}
+
+#Gallery-grid-main-img{
+    width:100%; 
+    height:100%; 
+    background-size:cover;
+    background-position: center; 
+}
+
+#Gallery-grid-container-2{
+    display:grid; 
+    grid-template-columns: repeat(2,1fr);
+}
+
+.Gallery-grid-sub-img{
+    background-size:cover;
+    background-position:center; 
+}
+
+@media(max-width:540px){
+    #Gallery-grid{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .Gallery-container{
+        margin-top:0px; 
+        padding-top:50px; 
+    }
+
+}
+
+.backdrop{
+    width:100%;
+    height:100%; 
+    position:fixed; 
+    top:0px; 
+    left:0px; 
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-img{ 
+    width:80%; 
+    height: 80%;
+    background-size:cover; 
+    background-position:center; 
+    margin:auto;
+    margin-top:8%; 
+    border:3px solid white; 
+    box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.5);
+    z-index:10;
+}

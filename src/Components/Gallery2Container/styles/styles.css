@@ -1,0 +1,9 @@
+#second_container{
+    /*margin-top: -150px;*/
+}
+
+@media(max-width:420px){
+    #second_container{
+        display: none;;
+    }
+}

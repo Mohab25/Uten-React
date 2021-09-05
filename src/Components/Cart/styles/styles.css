@@ -1,0 +1,66 @@
+.Cart{
+    width:100%; 
+}
+
+.Cart-container{
+    width:100%; 
+    height:100%; 
+
+}
+
+.total-qunatity-price-holder{
+    width:80%;
+    height:100px; 
+    margin:auto;
+    margin-top:25px;
+    padding:0px 30px;  
+    display:grid; 
+    grid-template-columns: 25% 50% 25%;
+    align-content:center; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.total-qunatity-price-holder div{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#to-checkout-btn{
+    padding: 20px;
+    border: none;
+    background-color: grey;
+    cursor: pointer;
+}
+
+table{
+    width:100%; 
+}
+table tr td{
+    padding-left:10px; 
+}
+.items-table{
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    padding:0px 25px; 
+    padding-top:15px; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+}
+
+#quantity-icons-holder{
+    display: inline-block;
+    margin-left:5px;
+}
+.up-arrow{
+    margin-right:3px; 
+    color: #0275d8 ; 
+    cursor: pointer;
+}
+.down-arrow{
+    color:#555; 
+    cursor: pointer;
+}
