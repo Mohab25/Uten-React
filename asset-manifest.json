@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Uten-React/static/css/main.22772640.chunk.css",
-    "main.js": "/Uten-React/static/js/main.e479a11b.chunk.js",
-    "main.js.map": "/Uten-React/static/js/main.e479a11b.chunk.js.map",
+    "main.js": "/Uten-React/static/js/main.f0a3f846.chunk.js",
+    "main.js.map": "/Uten-React/static/js/main.f0a3f846.chunk.js.map",
     "runtime-main.js": "/Uten-React/static/js/runtime-main.eb95341f.js",
     "runtime-main.js.map": "/Uten-React/static/js/runtime-main.eb95341f.js.map",
     "static/js/2.70cba677.chunk.js": "/Uten-React/static/js/2.70cba677.chunk.js",
     "static/js/2.70cba677.chunk.js.map": "/Uten-React/static/js/2.70cba677.chunk.js.map",
     "index.html": "/Uten-React/index.html",
-    "precache-manifest.8a067bed9c56a3afb7af9151bdee62b3.js": "/Uten-React/precache-manifest.8a067bed9c56a3afb7af9151bdee62b3.js",
+    "precache-manifest.cec4b5017c5da2060c74e03e637a0c2c.js": "/Uten-React/precache-manifest.cec4b5017c5da2060c74e03e637a0c2c.js",
     "service-worker.js": "/Uten-React/service-worker.js",
     "static/css/main.22772640.chunk.css.map": "/Uten-React/static/css/main.22772640.chunk.css.map",
     "static/js/2.70cba677.chunk.js.LICENSE.txt": "/Uten-React/static/js/2.70cba677.chunk.js.LICENSE.txt",
@@ -20,6 +20,6 @@
     "static/js/runtime-main.eb95341f.js",
     "static/js/2.70cba677.chunk.js",
     "static/css/main.22772640.chunk.css",
-    "static/js/main.e479a11b.chunk.js"
+    "static/js/main.f0a3f846.chunk.js"
   ]
 }
