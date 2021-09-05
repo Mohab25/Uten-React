@@ -1,4 +1,5 @@
 {
+  "homepage": "http://Mohab25.github.io/Uten-React",
   "name": "reactapp",
   "version": "0.1.0",
   "private": true,
@@ -47,6 +48,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^3.1.0"
+    "gh-pages": "^3.2.3"
   }
 }
