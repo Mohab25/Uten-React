@@ -25,25 +25,25 @@ class Index extends Component {
             console.log('filter#',this.props.filter)
             switch(this.props.filter){
                 case 'Knife':{
-                await fetch('http://ec2-18-118-61-96.us-east-2.compute.amazonaws.com/edda/store/Knife_Gallery/').then(res=>res.json()).then(
+                await fetch('https://ec2-18-118-61-96.us-east-2.compute.amazonaws.com/edda/store/Knife_Gallery/').then(res=>res.json()).then(
                 (data)=>{console.log('knifes:',data);this.setState({items:data})})
                 };break; 
                 case 'Spoon':{           
-                await fetch('http://ec2-18-118-61-96.us-east-2.compute.amazonaws.com/edda/store/Spoon_Gallery/').then(res=>res.json()).then(
+                await fetch('https://ec2-18-118-61-96.us-east-2.compute.amazonaws.com/edda/store/Spoon_Gallery/').then(res=>res.json()).then(
                 (data)=>{this.setState({items:data})})};break; 
                 case 'Pan':{           
-                    await fetch('http://ec2-18-118-61-96.us-east-2.compute.amazonaws.com/edda/store/Pan_Gallery/').then(res=>res.json()).then(
+                    await fetch('https://ec2-18-118-61-96.us-east-2.compute.amazonaws.com/edda/store/Pan_Gallery/').then(res=>res.json()).then(
                     (data)=>{this.setState({items:data})})};break; 
                 case 'Best':{
-                    await fetch('http://ec2-18-118-61-96.us-east-2.compute.amazonaws.com/edda/store/Best/').then(res=>res.json()).then((data)=>{this.setState({items:data})})
+                    await fetch('https://ec2-18-118-61-96.us-east-2.compute.amazonaws.com/edda/store/Best/').then(res=>res.json()).then((data)=>{this.setState({items:data})})
                 };break; 
                 
                 case 'latest':{
-                    await fetch('http://ec2-18-118-61-96.us-east-2.compute.amazonaws.com/edda/store/Latest/').then(res=>res.json()).then((data)=>{this.setState({items:data})})
+                    await fetch('https://ec2-18-118-61-96.us-east-2.compute.amazonaws.com/edda/store/Latest/').then(res=>res.json()).then((data)=>{this.setState({items:data})})
                 };break; 
 
                 default:{
-                    await fetch('http://ec2-18-118-61-96.us-east-2.compute.amazonaws.com/edda/store/Collection_Gallery/').then(res=>res.json()).then(
+                    await fetch('https://ec2-18-118-61-96.us-east-2.compute.amazonaws.com/edda/store/Collection_Gallery/').then(res=>res.json()).then(
                         (data)=>{this.setState({items:data})}
                     )
                 }    
@@ -100,9 +100,9 @@ class Index extends Component {
                     <div id='social'>
                         <p>Follow ME</p>
                         <div id='social-links'>
-                            <a href='http://www.facebook.com'><img src='./images/facebook-white.png'/></a>
-                            <a href='http://www.twitter.com'><img src='./images/twitter-white.png'/></a>
-                            <a href='http://www.google.com'><img src='./images/instagram-white.png'/></a>
+                            <a href='https://www.facebook.com'><img src='./images/facebook-white.png'/></a>
+                            <a href='https://www.twitter.com'><img src='./images/twitter-white.png'/></a>
+                            <a href='https://www.google.com'><img src='./images/instagram-white.png'/></a>
                         </div>
                         <a id='email' href='mailto:youmail@hotmail.com'>Email</a>
                         </div>
