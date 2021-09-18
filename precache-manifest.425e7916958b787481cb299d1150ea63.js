@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "26878d5ce43998b0693f9feef09ad664",
+    "revision": "6a296591a5e2996eefd3562ac18bbe0a",
     "url": "/Uten-React/index.html"
   },
   {
-    "revision": "d875ab390dc0fa233a58",
-    "url": "/Uten-React/static/css/main.22772640.chunk.css"
+    "revision": "afde09ff39a09067780e",
+    "url": "/Uten-React/static/css/main.565042b0.chunk.css"
   },
   {
-    "revision": "1b0c7578018b92f793db",
-    "url": "/Uten-React/static/js/2.70cba677.chunk.js"
+    "revision": "85c88871ad64ff2a2686",
+    "url": "/Uten-React/static/js/2.0911e04a.chunk.js"
   },
   {
     "revision": "928d7b5eb39d16fe9a880722c974b51e",
-    "url": "/Uten-React/static/js/2.70cba677.chunk.js.LICENSE.txt"
+    "url": "/Uten-React/static/js/2.0911e04a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d875ab390dc0fa233a58",
-    "url": "/Uten-React/static/js/main.1f2a2cd8.chunk.js"
+    "revision": "afde09ff39a09067780e",
+    "url": "/Uten-React/static/js/main.243feb0e.chunk.js"
   },
   {
     "revision": "493309c0705d9f2d47a0",
@@ -48,16 +48,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Uten-React/static/media/fontawesome-webfont.f99a231e.svg"
   },
   {
-    "revision": "c80ed082a2eea6ee0ec2df63a86dceb5",
-    "url": "/Uten-React/static/media/jonny-kennaugh-_NEjh6gzAgo-unsplash.c80ed082.jpg"
-  },
-  {
     "revision": "50902298371ce0f185167f2f21c1bbab",
     "url": "/Uten-React/static/media/offer.50902298.jpg"
-  },
-  {
-    "revision": "206c9f5be7a0defee9b4759d1ee4a10d",
-    "url": "/Uten-React/static/media/raphiell-alfaridzy-9dbSMiwTLoo-unsplash.206c9f5b.jpg"
   },
   {
     "revision": "de61bd6d1cf5c99fe0b98f91a1e6dba2",
