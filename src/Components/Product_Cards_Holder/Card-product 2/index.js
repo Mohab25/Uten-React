@@ -100,9 +100,9 @@ class Index extends Component {
                     <div id='social'>
                         <p>Follow ME</p>
                         <div id='social-links'>
-                            <a href='https://www.facebook.com'><img src='./images/facebook-white.png'/></a>
-                            <a href='https://www.twitter.com'><img src='./images/twitter-white.png'/></a>
-                            <a href='https://www.google.com'><img src='./images/instagram-white.png'/></a>
+                            <a href='http://www.facebook.com'><img src='./images/facebook-white.png'/></a>
+                            <a href='http://www.twitter.com'><img src='./images/twitter-white.png'/></a>
+                            <a href='http://www.google.com'><img src='./images/instagram-white.png'/></a>
                         </div>
                         <a id='email' href='mailto:youmail@hotmail.com'>Email</a>
                         </div>
