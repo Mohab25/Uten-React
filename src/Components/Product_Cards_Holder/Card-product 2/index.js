@@ -4,46 +4,43 @@ import './styles/font-awesome.css'
 import {connect} from 'react-redux'
 import change_icon_number from "../../../Actions/Cart_Checkout_related/CartIconChanger";
 import cartItemAdd  from "../../../Actions/Cart_Checkout_related/CartItemsAdd";
-
-
-// do i need to evaluate here ? i need to evaluate where the icon shows, but i need to trigger the thing here 
-
+import {withRouter} from 'react-router-dom' // look at the export
 
 class Index extends Component {
     constructor(props){
         super(props)
         this.state={
             items:[],
-            icon:"icon-heart-empty icon-large"
+            icon:"icon-heart-empty icon-large",
         };
         this.handleClick = this.handleClick.bind(this)
+        this.goToProductPage = this.goToProductPage.bind(this)
         
     }
 
     async componentDidMount(){
         if(this.props.url==undefined){
-            console.log('filter#',this.props.filter)
             switch(this.props.filter){
                 case 'Knife':{
-                await fetch('https://ec2-18-118-61-96.us-east-2.compute.amazonaws.com/edda/store/Knife_Gallery/').then(res=>res.json()).then(
-                (data)=>{console.log('knifes:',data);this.setState({items:data})})
+                await fetch('http://ec2-18-118-61-96.us-east-2.compute.amazonaws.com/edda/store/Knife_Gallery/').then(res=>res.json()).then(
+                (data)=>{this.setState({items:data})})
                 };break; 
                 case 'Spoon':{           
-                await fetch('https://ec2-18-118-61-96.us-east-2.compute.amazonaws.com/edda/store/Spoon_Gallery/').then(res=>res.json()).then(
+                await fetch('http://ec2-18-118-61-96.us-east-2.compute.amazonaws.com/edda/store/Spoon_Gallery/').then(res=>res.json()).then(
                 (data)=>{this.setState({items:data})})};break; 
                 case 'Pan':{           
-                    await fetch('https://ec2-18-118-61-96.us-east-2.compute.amazonaws.com/edda/store/Pan_Gallery/').then(res=>res.json()).then(
+                    await fetch('http://ec2-18-118-61-96.us-east-2.compute.amazonaws.com/edda/store/Pan_Gallery/').then(res=>res.json()).then(
                     (data)=>{this.setState({items:data})})};break; 
                 case 'Best':{
-                    await fetch('https://ec2-18-118-61-96.us-east-2.compute.amazonaws.com/edda/store/Best/').then(res=>res.json()).then((data)=>{this.setState({items:data})})
+                    await fetch('http://ec2-18-118-61-96.us-east-2.compute.amazonaws.com/edda/store/Best/').then(res=>res.json()).then((data)=>{this.setState({items:data})})
                 };break; 
                 
                 case 'latest':{
-                    await fetch('https://ec2-18-118-61-96.us-east-2.compute.amazonaws.com/edda/store/Latest/').then(res=>res.json()).then((data)=>{this.setState({items:data})})
+                    await fetch('http://ec2-18-118-61-96.us-east-2.compute.amazonaws.com/edda/store/Latest/').then(res=>res.json()).then((data)=>{this.setState({items:data})})
                 };break; 
 
                 default:{
-                    await fetch('https://ec2-18-118-61-96.us-east-2.compute.amazonaws.com/edda/store/Collection_Gallery/').then(res=>res.json()).then(
+                    await fetch('http://ec2-18-118-61-96.us-east-2.compute.amazonaws.com/edda/store/Collection_Gallery/').then(res=>res.json()).then(
                         (data)=>{this.setState({items:data})}
                     )
                 }    
@@ -51,7 +48,6 @@ class Index extends Component {
     
     }
         else{
-            console.log('CARD url value:',this.props.url)
             fetch(`${this.props.url}`).then(res=>res.json()).then(
                 data=>{ this.setState({items:data});}
             )
@@ -68,17 +64,23 @@ class Index extends Component {
 
     }
 
+    
+    goToProductPage(item){
+        this.props.history.push({pathname:'/product',state:{item}})
+    }
+
+
     render() {
         if(this.state.items.length===0){
             return(<Fragment></Fragment>)
         }
-        
+
         else{
             let card = this.state.items.map((item,index)=>{
             return(
                 <Fragment key={index}>
                 <div  className='card'>
-                    <div id="card-image-container">
+                    <div id="card-image-container" onClick={()=>{this.goToProductPage(item)}}>
                         <span id='heart'><i className={this.state.icon} onClick={this.handleClick}></i></span>
                         <span id='sale-badge'>{item.feature}</span>
                         <img id='card-img' src={item.image}/>
@@ -87,7 +89,7 @@ class Index extends Component {
                         <button id='card-btn'><div id='btn-text'><span><i className='icon-bell'></i></span><span>Close</span></div></button>
                             <div id='card-texts'>
                                 <div id='title-badge'>
-                                    <h3 id='card-title'>{item.name}</h3>
+                                    <h3 id='card-title' onClick={()=>this.goToProductPage(item)}>{item.name}</h3>
                                     <span id='badge'>{item.feature}</span>
                                 </div>
                                 <p id='card-paragraph'>{item.description}</p>
@@ -100,9 +102,9 @@ class Index extends Component {
                     <div id='social'>
                         <p>Follow ME</p>
                         <div id='social-links'>
-                            <a href='https://www.facebook.com'><img src='./images/facebook-white.png'/></a>
-                            <a href='https://www.twitter.com'><img src='./images/twitter-white.png'/></a>
-                            <a href='https://www.google.com'><img src='./images/instagram-white.png'/></a>
+                            <a href='http://www.facebook.com'><img src='./images/facebook-white.png'/></a>
+                            <a href='http://www.twitter.com'><img src='./images/twitter-white.png'/></a>
+                            <a href='http://www.google.com'><img src='./images/instagram-white.png'/></a>
                         </div>
                         <a id='email' href='mailto:youmail@hotmail.com'>Email</a>
                         </div>
@@ -123,4 +125,4 @@ let mapStateTpProps=(state)=>({
     
 })
 
-export default  connect(mapStateTpProps)(Index);
+export default  withRouter(connect(mapStateTpProps)(Index));

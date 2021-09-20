@@ -45,10 +45,6 @@ h3{
     transition:0.5s; 
 }
 
-.btn-filter:hover{
-    transform: scale(1.1);
-}
-
 @media(min-width:911px){
     .cards-holder{
         max-width:100%; 

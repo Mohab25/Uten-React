@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component,useEffect } from 'react'
 import Loader from '../Loader/index'
 import Nav from '../Nav'
 import Panel from '../Panel'
@@ -11,13 +11,10 @@ import Contact from '../Contact'
 import PopupCard from '../PopupCard'
 import Footer from '../Footer'
 export default class index extends Component {
-constructor(props){
-    super(props);
-    this.state={
-        loading:true, 
-    }
-}
 
+componentWillUnmount(){
+    return 
+}
     render() {
         return (
                 <div style={{width:'100%'}}>

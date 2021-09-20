@@ -4,36 +4,39 @@ import Card from '../Product_Cards_Holder/Card-product 2'
 import './styles/styles.css'
 
 class Index extends Component {
-
-    state={
-        items:[],
-        name:'',
-        url:'',
-        filter:''
+    constructor(props){
+        super(props)        
+        this.state={
+            items:[],
+            name:'',
+        }
     }
-
 componentDidMount(){
     // access the redux store here to find the link name (android,apple ...)
     // according to the name, fetch the date here and set the state of items accordingly 
-    this.setState({name:this.props.categ})
+    let category  = this.props.category
+    this.setState({name:this.props.category})
 }
+
 
 render() {
             // make an object holding items here     
         if(this.state.name==''){return <div></div>}
             return (
-                <Fragment>
-                <h2>{this.state.name} Products</h2>
-                <div className='category-cards-holder'>
-                <Card filter={this.state.name}/>
-            </div>
-            </Fragment>
+                <div class='category-holder'>
+                    <div className='category-holder-container'>
+                    <h2>{this.state.name} Products</h2>
+                        <div className='category-cards-holder'>
+                        <Card filter={this.state.name}/>
+                        </div>
+                    </div>
+                </div>
         )
     }
 }
 
 let mapStateToProps=(state)=>({
-    categ:state.SetCategory.category
+    category:state.SetCategory.category
 })
 
 export default connect(mapStateToProps)(Index); 

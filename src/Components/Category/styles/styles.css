@@ -1,4 +1,17 @@
+.category-holder{
+    width:100%; 
+    height:100%; 
+}
+
+.category-holder-container{
+    width:90%; 
+    height:100%; 
+    margin-top:25px; 
+    margin:auto; 
+}
+
 .category-cards-holder{
+    width:100%; 
     display:grid; 
     grid-template-columns: repeat(3,1fr);
 }
