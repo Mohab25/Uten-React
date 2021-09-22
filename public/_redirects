@@ -1,1 +1,1 @@
-http://ec2-18-118-61-96.us-east-2.compute.amazonaws.com/edda/              http://ec2-18-118-61-96.us-east-2.compute.amazonaws.com/edda/:splat 200!
+/edda/*              http://ec2-18-118-61-96.us-east-2.compute.amazonaws.com/edda/:splat 200!
